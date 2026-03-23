@@ -1,43 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNF IT Solutions | Ethical IT Recruiting Ontario</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; padding: 60px 0; background-color: #f4f7fa; border-radius: 8px; margin-bottom: 40px; }
-        h1 { color: #2c3e50; font-size: 2.5em; margin-bottom: 10px; }
-        .tagline { font-size: 1.2em; color: #5a67d8; font-weight: bold; }
-        .license { background: #e2e8f0; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-top: 10px; }
-        section { margin-bottom: 40px; }
-        .cta-button { display: inline-block; background: #5a67d8; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; }
-        .cta-button:hover { background: #434190; }
-        footer { text-align: center; font-size: 0.8em; color: #718096; border-top: 1px solid #edf2f7; padding-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNF Tech — Reliable IT Hiring for Small Businesses in Ontario</title>
+<meta name="description" content="SNF Tech helps small businesses in Ontario hire reliable IT talent. Ethical, transparent, and licensed IT recruitment. Licensed Recruiter REC-0000012865.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0C2340; --blue: #1A5FA8; --blue-light: #E8F1FB;
+    --accent: #C8973A; --accent-light: #FBF4E8;
+    --text: #0C2340; --text-mid: #3D5068; --text-soft: #7A8FA8;
+    --bg: #F7F8FA; --white: #ffffff; --border: #DDE4EC;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(247,248,250,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { display: flex; align-items: center; text-decoration: none; }
+  .nav-cta { background: var(--navy); color: var(--white); text-decoration: none; padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 500; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--blue); }
+
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 100px 2rem 80px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 55%; height: 100%; background: linear-gradient(135deg, var(--blue-light) 0%, #dbeaf8 100%); clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0; }
+  .hero-inner { max-width: 1100px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-light); border: 1px solid #E8C97A; border-radius: 100px; padding: 6px 14px; font-size: 12px; font-weight: 500; color: #8A6020; letter-spacing: 0.4px; margin-bottom: 1.25rem; }
+  .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 300; line-height: 1.2; color: var(--navy); margin-bottom: 1.25rem; letter-spacing: -0.5px; }
+  .hero h1 em { font-style: italic; color: var(--blue); }
+  .hero-desc { font-size: 17px; color: var(--text-mid); margin-bottom: 2rem; line-height: 1.75; max-width: 440px; }
+  .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--navy); color: var(--white); text-decoration: none; padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 500; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
+  .btn-secondary { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 500; border-bottom: 1.5px solid var(--navy); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+  .btn-secondary:hover { color: var(--blue); border-color: var(--blue); }
+  .hero-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); padding: 2rem; box-shadow: 0 4px 32px rgba(12,35,64,0.08); }
+  .hero-card-label { font-size: 11px; font-weight: 500; letter-spacing: 1px; color: var(--text-soft); text-transform: uppercase; margin-bottom: 1.25rem; }
+  .hero-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .hero-stat { background: var(--bg); border-radius: 10px; padding: 1rem; }
+  .hero-stat-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--navy); line-height: 1; margin-bottom: 4px; }
+  .hero-stat-label { font-size: 12px; color: var(--text-soft); }
+  .hero-license { display: flex; align-items: center; gap: 10px; background: var(--blue-light); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--blue); font-weight: 500; }
+
+  section { padding: 80px 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; color: var(--blue); text-transform: uppercase; margin-bottom: 0.75rem; }
+  .section-title { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 300; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
+  .section-sub { font-size: 17px; color: var(--text-mid); max-width: 560px; line-height: 1.75; }
+
+  .why { background: var(--white); }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .why-card { background: var(--bg); border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); transition: border-color 0.2s, box-shadow 0.2s; }
+  .why-card:hover { border-color: #B5D0ED; box-shadow: 0 4px 20px rgba(12,35,64,0.07); }
+  .why-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+  .why-card h3 { font-size: 16px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
+  .why-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+
+  .how { background: var(--bg); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; position: relative; }
+  .steps::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: var(--border); z-index: 0; }
+  .step { position: relative; z-index: 1; text-align: center; }
+  .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin: 0 auto 1rem; }
+  .step:nth-child(1) .step-num { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .step h4 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.4rem; }
+  .step p { font-size: 13px; color: var(--text-soft); line-height: 1.6; }
+
+  .values { background: var(--navy); }
+  .values .section-title { color: var(--white); }
+  .values .section-tag { color: #7AABDA; }
+  .values .section-sub { color: #9BB8D4; }
+  .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .value-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.75rem; transition: border-color 0.2s, background 0.2s; }
+  .value-card:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.2); }
+  .value-card h3 { font-size: 15px; font-weight: 500; color: var(--white); margin-bottom: 0.5rem; }
+  .value-card p { font-size: 14px; color: #9BB8D4; line-height: 1.65; }
+  .value-accent { width: 32px; height: 3px; border-radius: 2px; background: var(--accent); margin-bottom: 1rem; }
+
+  .cta-section { background: var(--white); }
+  .cta-box { background: var(--blue-light); border: 1px solid #C0D8F0; border-radius: 16px; padding: 3rem; text-align: center; max-width: 680px; margin: 0 auto; }
+  .cta-box h2 { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 2.5vw, 2.1rem); font-weight: 300; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.3; }
+  .cta-box p { font-size: 16px; color: var(--text-mid); margin-bottom: 2rem; }
+  .cta-contact { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; margin-top: 1.75rem; font-size: 14px; color: var(--text-soft); }
+  .cta-contact a { color: var(--blue); text-decoration: none; font-weight: 500; }
+  .cta-contact a:hover { text-decoration: underline; }
+
+  footer { background: var(--navy); color: #9BB8D4; padding: 2.5rem 2rem; font-size: 13px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
+  .footer-links { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+  footer a { color: #7AABDA; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .footer-bottom { color: #5A7A99; font-size: 12px; text-align: center; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-left > * { animation: fadeUp 0.6s ease both; }
+  .hero-left > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.25s; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.35s; }
+  .hero-left > *:nth-child(5) { animation-delay: 0.45s; }
+  .hero-card { animation: fadeUp 0.6s ease 0.35s both; }
+
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero::before { display: none; }
+    .hero-card { display: none; }
+    .why-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .steps::before { display: none; }
+    .values-grid { grid-template-columns: 1fr; }
+    .footer-links { flex-direction: column; gap: 0.5rem; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>SNF IT Solutions Inc.</h1>
-        <p class="tagline">Helping Small Business Owners Hire IT Talent They Can Trust</p>
-        <div class="license">Licensed Ontario Recruiter: REC-0000012865</div>
-    </header>
+<nav>
+  <a href="#" class="nav-brand">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:36px;width:auto;">
+      <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#0C2340" letter-spacing="-2">SNF</text>
+      <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#1A5FA8" letter-spacing="-1">TECH</text>
+      <rect x="20" y="88" width="190" height="4" rx="2" fill="#0C2340"/>
+      <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
+    </svg>
+  </a>
+  <a href="mailto:nfsyed@snftech.ca" class="nav-cta">Get in Touch</a>
+</nav>
 
-    <section>
-        <h2>Hiring IT Professionals Shouldn't Be a Risk</h2>
-        <p>You need a team that builds your future, not one that costs you time and money through bad hires. We simplify the process by providing <strong>ethical, transparent, and principled recruitment</strong> tailored for small businesses in Ontario.</p>
-    </section>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:52px;width:auto;margin-bottom:1.25rem;display:block;">
+        <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#0C2340" letter-spacing="-2">SNF</text>
+        <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#1A5FA8" letter-spacing="-1">TECH</text>
+        <rect x="20" y="88" width="190" height="4" rx="2" fill="#0C2340"/>
+        <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
+        <text x="20" y="114" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#7A8FA8" letter-spacing="3">IT RECRUITMENT · ONTARIO</text>
+      </svg>
+      <div class="hero-badge"><span class="badge-dot"></span>Ontario-Based · Halal-Compliant</div>
+      <h1>Hire IT Talent<br>You Can <em>Actually</em><br>Rely On</h1>
+      <p class="hero-desc">We help small businesses in Ontario find dependable IT professionals — without the stress, wasted time, or costly bad hires.</p>
+      <div class="hero-actions">
+        <a href="mailto:nfsyed@snftech.ca" class="btn-primary">Book a Free 15-Min Call</a>
+        <a href="#how" class="btn-secondary">See how it works →</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">Why clients choose SNF Tech</div>
+      <div class="hero-stat-row">
+        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Ethical process</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">ON</div><div class="hero-stat-label">Ontario-based</div></div>
+      </div>
+      <div class="hero-license">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        Licensed Ontario Recruiter · REC-0000012865
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section style="text-align: center;">
-        <h3>Ready to find your next reliable hire?</h3>
-        <p>Let's have a 15-minute conversation about your team's needs.</p>
-        <a href="mailto:nfsyed@snftech.ca" class="cta-button">Email us</a>
-    </section>
+<section class="why">
+  <div class="section-inner">
+    <div class="section-tag">Why SNF Tech</div>
+    <h2 class="section-title">Hiring IT Professionals<br>Shouldn't Be a Risk</h2>
+    <p class="section-sub">You need a team that builds your future, not one that costs you time and money through bad hires.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Ethical &amp; Transparent</h3>
+        <p>No hidden fees. No pressure tactics. Honest communication from the first call to the final placement. You always know exactly what's happening.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20A14.5 14.5 0 0 0 12 2"/><path d="M2 12h20"/></svg></div>
+        <h3>Ontario-Based &amp; Local</h3>
+        <p>We know the Ontario market, understand local hiring conditions, and place candidates genuinely suited to your business culture and location.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>Licensed &amp; Accountable</h3>
+        <p>Fully licensed with the Ontario government (REC-0000012865). A registered, accountable recruiter — not a freelancer with no oversight.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 SNF IT Solutions Inc. | Ontario, Canada | snftech.ca</p>
-    </footer>
+<section class="how" id="how">
+  <div class="section-inner">
+    <div class="section-tag">The Process</div>
+    <h2 class="section-title">Simple. Clear. No Surprises.</h2>
+    <p class="section-sub">We keep things straightforward so you can focus on running your business.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Free consultation</h4><p>15-minute call to understand your exact hiring need</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Candidate search</h4><p>We find and screen qualified IT candidates for your role</p></div>
+      <div class="step"><div class="step-num">3</div><h4>You interview</h4><p>Only the best matches reach your desk — no time wasted</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Successful hire</h4><p>Your new team member starts. We follow up to ensure fit</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="section-inner">
+    <div class="section-tag">Our Principles</div>
+    <h2 class="section-title">Built on Values<br>That Don't Change</h2>
+    <p class="section-sub">Every decision we make is guided by the same principles — from which candidates we recommend to how we structure agreements.</p>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-accent"></div><h3>Halal-Compliant Practice</h3><p>We operate strictly within Halal business principles. Transparent contracts, fair dealings, and we do not work with industries that conflict with ethical standards.</p></div>
+      <div class="value-card"><div class="value-accent"></div><h3>No Hidden Fees</h3><p>Our pricing is clear upfront. You will never be surprised by an invoice. What we agree on in the beginning is what you pay — nothing more.</p></div>
+      <div class="value-card"><div class="value-accent"></div><h3>Long-Term Fit Over Quick Placement</h3><p>We care that the person we place actually works out — because your success is how we build our reputation.</p></div>
+      <div class="value-card"><div class="value-accent"></div><h3>Respect for Your Time</h3><p>We respond quickly, communicate clearly, and never waste your time with candidates who don't meet the brief.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="cta-box">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:44px;width:auto;display:block;margin:0 auto 1.5rem;">
+        <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#0C2340" letter-spacing="-2">SNF</text>
+        <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#1A5FA8" letter-spacing="-1">TECH</text>
+        <rect x="20" y="88" width="190" height="4" rx="2" fill="#0C2340"/>
+        <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
+      </svg>
+      <h2>Ready to Find Your Next Reliable Hire?</h2>
+      <p>Let's have a 15-minute conversation about what you're looking for. No commitment, no pressure.</p>
+      <a href="mailto:nfsyed@snftech.ca" class="btn-primary">Book a Free Call</a>
+      <div class="cta-contact">
+        <span>Or reach us directly:</span>
+        <a href="mailto:nfsyed@snftech.ca">nfsyed@snftech.ca</a>
+        <a href="https://linkedin.com/in/fahadsy" target="_blank">linkedin.com/in/fahadsy</a>
+        <a href="https://snftech.ca">snftech.ca</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:38px;width:auto;">
+      <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#ffffff" letter-spacing="-2">SNF</text>
+      <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#7AABDA" letter-spacing="-1">TECH</text>
+      <rect x="20" y="88" width="190" height="4" rx="2" fill="#ffffff"/>
+      <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
+    </svg>
+    <div class="footer-links">
+      <a href="mailto:nfsyed@snftech.ca">nfsyed@snftech.ca</a>
+      <a href="https://snftech.ca">snftech.ca</a>
+      <a href="https://linkedin.com/in/fahadsy" target="_blank">linkedin.com/in/fahadsy</a>
+    </div>
+    <div class="footer-bottom">© 2026 SNF IT Solutions Inc. · Ontario, Canada &nbsp;·&nbsp; Licensed Ontario Recruiter · REC-0000012865</div>
+  </div>
+</footer>
 
 </body>
 </html>
