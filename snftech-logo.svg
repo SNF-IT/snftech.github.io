@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;800&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Wordmark: SNF bold + TECH light -->
+  <text
+    x="20"
+    y="72"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="62"
+    font-weight="800"
+    fill="#0C2340"
+    letter-spacing="-2">SNF</text>
+
+  <text
+    x="174"
+    y="72"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="62"
+    font-weight="200"
+    fill="#1A5FA8"
+    letter-spacing="-1">TECH</text>
+
+  <!-- Two-tone underline: navy left, gold right -->
+  <rect x="20" y="82" width="190" height="4" rx="2" fill="#0C2340"/>
+  <rect x="210" y="82" width="170" height="4" rx="2" fill="#C8973A"/>
+
+  <!-- Tagline -->
+  <text
+    x="20"
+    y="108"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13"
+    font-weight="400"
+    fill="#7A8FA8"
+    letter-spacing="3">IT RECRUITMENT · ONTARIO</text>
+</svg>
