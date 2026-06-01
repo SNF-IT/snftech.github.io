@@ -3,256 +3,495 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SNF Tech — Reliable IT Hiring for Small Businesses in Ontario</title>
-<meta name="description" content="SNF Tech helps small businesses in Ontario hire reliable IT talent. Ethical, transparent, and licensed IT recruitment. Licensed Recruiter REC-0000012865.">
+<title>SNF Tech — Ontario's Only Halal-Compliant IT Recruiter</title>
+<meta name="description" content="Ontario's only Halal-compliant IT recruitment firm. Placing Cloud and DevOps engineers at small businesses with full transparency, no hidden fees, and a 90-day guarantee. Licensed REC-0000012865.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --navy: #0C2340; --blue: #1A5FA8; --blue-light: #E8F1FB;
-    --accent: #C8973A; --accent-light: #FBF4E8;
-    --text: #0C2340; --text-mid: #3D5068; --text-soft: #7A8FA8;
-    --bg: #F7F8FA; --white: #ffffff; --border: #DDE4EC;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0B1F38;
+  --navy2:#0F2845;
+  --blue:#1A5FA8;
+  --blue2:#1E6FC0;
+  --gold:#C8973A;
+  --gold2:#E0AA4A;
+  --gold-light:#FBF4E8;
+  --cream:#F9F7F4;
+  --white:#FFFFFF;
+  --text:#0B1F38;
+  --text-mid:#3D5068;
+  --text-soft:#8A9DB5;
+  --border:#DDE6F0;
+  --border-soft:#EEF3F8;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(247,248,250,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-  .nav-brand { display: flex; align-items: center; text-decoration: none; }
-  .nav-cta { background: var(--navy); color: var(--white); text-decoration: none; padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 500; transition: background 0.2s; }
-  .nav-cta:hover { background: var(--blue); }
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
 
-  .hero { min-height: 100vh; display: flex; align-items: center; padding: 100px 2rem 80px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 55%; height: 100%; background: linear-gradient(135deg, var(--blue-light) 0%, #dbeaf8 100%); clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0; }
-  .hero-inner { max-width: 1100px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-light); border: 1px solid #E8C97A; border-radius: 100px; padding: 6px 14px; font-size: 12px; font-weight: 500; color: #8A6020; letter-spacing: 0.4px; margin-bottom: 1.25rem; }
-  .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-  .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 300; line-height: 1.2; color: var(--navy); margin-bottom: 1.25rem; letter-spacing: -0.5px; }
-  .hero h1 em { font-style: italic; color: var(--blue); }
-  .hero-desc { font-size: 17px; color: var(--text-mid); margin-bottom: 2rem; line-height: 1.75; max-width: 440px; }
-  .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary { background: var(--navy); color: var(--white); text-decoration: none; padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 500; transition: background 0.2s, transform 0.15s; display: inline-block; }
-  .btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
-  .btn-secondary { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 500; border-bottom: 1.5px solid var(--navy); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
-  .btn-secondary:hover { color: var(--blue); border-color: var(--blue); }
-  .hero-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); padding: 2rem; box-shadow: 0 4px 32px rgba(12,35,64,0.08); }
-  .hero-card-label { font-size: 11px; font-weight: 500; letter-spacing: 1px; color: var(--text-soft); text-transform: uppercase; margin-bottom: 1.25rem; }
-  .hero-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
-  .hero-stat { background: var(--bg); border-radius: 10px; padding: 1rem; }
-  .hero-stat-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--navy); line-height: 1; margin-bottom: 4px; }
-  .hero-stat-label { font-size: 12px; color: var(--text-soft); }
-  .hero-license { display: flex; align-items: center; gap: 10px; background: var(--blue-light); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--blue); font-weight: 500; }
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 3rem;height:68px;display:flex;align-items:center;justify-content:space-between;transition:background 0.3s,box-shadow 0.3s;}
+nav.scrolled{background:rgba(249,247,244,0.97);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border);}
+.nav-logo svg{height:34px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:2.5rem;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text-mid);text-decoration:none;letter-spacing:0.3px;transition:color 0.2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-cta{background:var(--navy);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-size:13px;font-weight:500;transition:background 0.2s,transform 0.15s!important;}
+.nav-cta:hover{background:var(--blue)!important;transform:translateY(-1px);}
 
-  section { padding: 80px 2rem; }
-  .section-inner { max-width: 1100px; margin: 0 auto; }
-  .section-tag { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; color: var(--blue); text-transform: uppercase; margin-bottom: 0.75rem; }
-  .section-title { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 300; color: var(--navy); line-height: 1.25; margin-bottom: 1rem; }
-  .section-sub { font-size: 17px; color: var(--text-mid); max-width: 560px; line-height: 1.75; }
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
 
-  .why { background: var(--white); }
-  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-  .why-card { background: var(--bg); border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); transition: border-color 0.2s, box-shadow 0.2s; }
-  .why-card:hover { border-color: #B5D0ED; box-shadow: 0 4px 20px rgba(12,35,64,0.07); }
-  .why-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
-  .why-card h3 { font-size: 16px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
-  .why-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:120px 4rem 80px 6rem;position:relative;z-index:2;}
+.hero-right{background:var(--navy);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:120px 4rem 80px;}
 
-  .how { background: var(--bg); }
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; position: relative; }
-  .steps::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: var(--border); z-index: 0; }
-  .step { position: relative; z-index: 1; text-align: center; }
-  .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin: 0 auto 1rem; }
-  .step:nth-child(1) .step-num { background: var(--navy); color: var(--white); border-color: var(--navy); }
-  .step h4 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.4rem; }
-  .step p { font-size: 13px; color: var(--text-soft); line-height: 1.6; }
+/* right side geometric decoration */
+.hero-right::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:rgba(26,95,168,0.15);z-index:0;}
+.hero-right::after{content:'';position:absolute;bottom:-80px;left:-60px;width:350px;height:350px;border-radius:50%;background:rgba(200,151,58,0.08);z-index:0;}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px;z-index:0;}
 
-  .values { background: var(--navy); }
-  .values .section-title { color: var(--white); }
-  .values .section-tag { color: #7AABDA; }
-  .values .section-sub { color: #9BB8D4; }
-  .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
-  .value-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.75rem; transition: border-color 0.2s, background 0.2s; }
-  .value-card:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.2); }
-  .value-card h3 { font-size: 15px; font-weight: 500; color: var(--white); margin-bottom: 0.5rem; }
-  .value-card p { font-size: 14px; color: #9BB8D4; line-height: 1.65; }
-  .value-accent { width: 32px; height: 3px; border-radius: 2px; background: var(--accent); margin-bottom: 1rem; }
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-light);border:1px solid rgba(200,151,58,0.3);border-radius:100px;padding:6px 16px;font-size:11px;font-weight:600;color:#7A5010;letter-spacing:1px;text-transform:uppercase;margin-bottom:2rem;width:fit-content;}
+.badge-pulse{width:7px;height:7px;border-radius:50%;background:var(--gold);position:relative;}
+.badge-pulse::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1.5px solid var(--gold);animation:pulse 2s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0;transform:scale(1.6);}}
 
-  .cta-section { background: var(--white); }
-  .cta-box { background: var(--blue-light); border: 1px solid #C0D8F0; border-radius: 16px; padding: 3rem; text-align: center; max-width: 680px; margin: 0 auto; }
-  .cta-box h2 { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 2.5vw, 2.1rem); font-weight: 300; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.3; }
-  .cta-box p { font-size: 16px; color: var(--text-mid); margin-bottom: 2rem; }
-  .cta-contact { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; margin-top: 1.75rem; font-size: 14px; color: var(--text-soft); }
-  .cta-contact a { color: var(--blue); text-decoration: none; font-weight: 500; }
-  .cta-contact a:hover { text-decoration: underline; }
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,4.2rem);font-weight:300;line-height:1.12;color:var(--navy);letter-spacing:-1px;margin-bottom:1.5rem;}
+.hero h1 em{font-style:italic;color:var(--blue);}
+.hero h1 strong{font-weight:600;}
 
-  footer { background: var(--navy); color: #9BB8D4; padding: 2.5rem 2rem; font-size: 13px; }
-  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
-  .footer-links { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center; }
-  footer a { color: #7AABDA; text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-  .footer-bottom { color: #5A7A99; font-size: 12px; text-align: center; }
+.hero-desc{font-size:16px;color:var(--text-mid);line-height:1.8;max-width:480px;margin-bottom:2.5rem;font-weight:300;}
 
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  .hero-left > * { animation: fadeUp 0.6s ease both; }
-  .hero-left > *:nth-child(1) { animation-delay: 0.05s; }
-  .hero-left > *:nth-child(2) { animation-delay: 0.15s; }
-  .hero-left > *:nth-child(3) { animation-delay: 0.25s; }
-  .hero-left > *:nth-child(4) { animation-delay: 0.35s; }
-  .hero-left > *:nth-child(5) { animation-delay: 0.45s; }
-  .hero-card { animation: fadeUp 0.6s ease 0.35s both; }
+.hero-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:3rem;}
+.btn-primary{background:var(--navy);color:var(--white);text-decoration:none;padding:14px 32px;border-radius:8px;font-size:14px;font-weight:500;letter-spacing:0.3px;transition:background 0.2s,transform 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--blue);transform:translateY(-2px);}
+.btn-ghost{color:var(--navy);text-decoration:none;font-size:14px;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:2px;border-bottom:1.5px solid var(--navy);transition:color 0.2s,border-color 0.2s;}
+.btn-ghost:hover{color:var(--blue);border-color:var(--blue);}
 
-  @media (max-width: 768px) {
-    .hero-inner { grid-template-columns: 1fr; }
-    .hero::before { display: none; }
-    .hero-card { display: none; }
-    .why-grid { grid-template-columns: 1fr; }
-    .steps { grid-template-columns: repeat(2, 1fr); }
-    .steps::before { display: none; }
-    .values-grid { grid-template-columns: 1fr; }
-    .footer-links { flex-direction: column; gap: 0.5rem; }
-    .hero-actions { flex-direction: column; align-items: flex-start; }
-  }
+.hero-trust{display:flex;align-items:center;gap:1.5rem;padding-top:2rem;border-top:1px solid var(--border);}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-soft);font-weight:400;}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);}
+
+/* right side card stack */
+.card-stack{position:relative;z-index:1;width:100%;max-width:360px;}
+.stat-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.5rem;margin-bottom:1rem;backdrop-filter:blur(10px);transition:transform 0.3s,background 0.3s;}
+.stat-card:hover{background:rgba(255,255,255,0.1);transform:translateX(-4px);}
+.stat-card:last-child{margin-bottom:0;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--white);line-height:1;margin-bottom:4px;}
+.stat-num span{font-size:1.6rem;color:var(--gold);}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.5);font-weight:400;letter-spacing:0.3px;}
+.stat-sub{font-size:13px;color:rgba(255,255,255,0.75);margin-top:4px;font-weight:300;}
+
+.license-strip{background:rgba(200,151,58,0.12);border:1px solid rgba(200,151,58,0.25);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:12px;margin-top:1.25rem;}
+.license-strip svg{flex-shrink:0;}
+.license-strip p{font-size:12px;color:rgba(255,255,255,0.8);margin:0;line-height:1.5;}
+.license-strip strong{color:var(--gold);font-weight:600;}
+
+/* ── MARQUEE ── */
+.marquee-wrap{background:var(--navy);padding:14px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
+.marquee-track{display:flex;gap:0;animation:marquee 28s linear infinite;width:max-content;}
+.marquee-track:hover{animation-play-state:paused;}
+.marquee-item{display:flex;align-items:center;gap:12px;padding:0 2.5rem;white-space:nowrap;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);}
+.marquee-item .dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ── SECTIONS ── */
+section{padding:90px 6rem;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-tag{font-size:11px;font-weight:600;letter-spacing:2px;color:var(--blue);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:8px;}
+.section-tag::before{content:'';width:24px;height:2px;background:var(--gold);border-radius:1px;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--navy);line-height:1.2;margin-bottom:1rem;letter-spacing:-0.5px;}
+.section-title em{font-style:italic;color:var(--blue);}
+.section-sub{font-size:16px;color:var(--text-mid);max-width:560px;line-height:1.8;font-weight:300;}
+
+/* ── WHY ── */
+.why{background:var(--white);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.why-card{background:var(--cream);border-radius:14px;padding:2rem;border:1px solid var(--border-soft);position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;}
+.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.why-card:hover{border-color:var(--border);transform:translateY(-3px);box-shadow:0 12px 40px rgba(11,31,56,0.08);}
+.why-card:hover::before{transform:scaleX(1);}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--border);line-height:1;margin-bottom:1rem;letter-spacing:-2px;}
+.why-card h3{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:0.6rem;letter-spacing:0.2px;}
+.why-card p{font-size:13px;color:var(--text-mid);line-height:1.7;font-weight:300;}
+
+/* ── PROCESS ── */
+.process{background:var(--navy);position:relative;overflow:hidden;}
+.process::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:rgba(26,95,168,0.08);}
+.process .section-title{color:var(--white);}
+.process .section-tag{color:#7AABDA;}
+.process .section-sub{color:rgba(255,255,255,0.5);}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:3.5rem;background:rgba(255,255,255,0.06);border-radius:14px;overflow:hidden;}
+.step{padding:2rem 1.75rem;background:rgba(255,255,255,0.02);position:relative;transition:background 0.2s;}
+.step:hover{background:rgba(255,255,255,0.05);}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);opacity:0.4;line-height:1;margin-bottom:1.25rem;}
+.step h4{font-size:14px;font-weight:600;color:var(--white);margin-bottom:0.5rem;letter-spacing:0.3px;}
+.step p{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.65;font-weight:300;}
+.step-arrow{position:absolute;top:2rem;right:1.5rem;color:rgba(255,255,255,0.12);font-size:18px;}
+
+/* ── VALUES ── */
+.values{background:var(--cream);}
+.values-split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:1rem;}
+.values-left{position:sticky;top:100px;}
+.values-left .section-title{margin-bottom:1.5rem;}
+.values-left p{font-size:15px;color:var(--text-mid);line-height:1.8;font-weight:300;margin-bottom:2rem;}
+.values-cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--white);text-decoration:none;padding:14px 28px;border-radius:8px;font-size:14px;font-weight:500;transition:background 0.2s,transform 0.15s;}
+.values-cta:hover{background:var(--blue);transform:translateY(-2px);}
+.values-list{display:flex;flex-direction:column;gap:1px;padding-top:2rem;}
+.value-item{background:var(--white);border-radius:12px;padding:1.75rem;margin-bottom:1rem;border:1px solid var(--border-soft);transition:border-color 0.2s,box-shadow 0.2s;}
+.value-item:hover{border-color:var(--border);box-shadow:0 4px 24px rgba(11,31,56,0.06);}
+.value-header{display:flex;align-items:center;gap:12px;margin-bottom:0.75rem;}
+.value-icon{width:36px;height:36px;border-radius:8px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.value-item h3{font-size:15px;font-weight:600;color:var(--navy);}
+.value-item p{font-size:13px;color:var(--text-mid);line-height:1.7;font-weight:300;}
+
+/* ── CTA ── */
+.cta-section{background:var(--white);}
+.cta-inner{max-width:800px;margin:0 auto;text-align:center;}
+.cta-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;}
+.cta-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;color:var(--navy);line-height:1.2;margin-bottom:1rem;letter-spacing:-0.5px;}
+.cta-inner h2 em{font-style:italic;color:var(--blue);}
+.cta-inner p{font-size:16px;color:var(--text-mid);margin-bottom:2.5rem;font-weight:300;line-height:1.8;}
+.cta-box{background:var(--navy);border-radius:20px;padding:3rem;position:relative;overflow:hidden;}
+.cta-box::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:rgba(26,95,168,0.2);}
+.cta-box::after{content:'';position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;border-radius:50%;background:rgba(200,151,58,0.1);}
+.cta-box-inner{position:relative;z-index:1;}
+.cta-logo{display:block;margin:0 auto 2rem;}
+.cta-box h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.75rem;text-align:center;}
+.cta-box p{font-size:15px;color:rgba(255,255,255,0.55);text-align:center;margin-bottom:2rem;font-weight:300;}
+.cta-btn-row{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
+.cta-btn-gold{background:var(--gold);color:var(--navy);text-decoration:none;padding:14px 32px;border-radius:8px;font-size:14px;font-weight:600;letter-spacing:0.3px;transition:background 0.2s,transform 0.15s;display:inline-block;}
+.cta-btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.cta-btn-outline{border:1px solid rgba(255,255,255,0.25);color:var(--white);text-decoration:none;padding:14px 32px;border-radius:8px;font-size:14px;font-weight:400;transition:border-color 0.2s,background 0.2s;display:inline-block;}
+.cta-btn-outline:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05);}
+.cta-contacts{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);}
+.cta-contact-item{font-size:13px;color:rgba(255,255,255,0.45);display:flex;align-items:center;gap:6px;}
+.cta-contact-item a{color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s;}
+.cta-contact-item a:hover{color:var(--gold);}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);padding:2.5rem 6rem;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.footer-links{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-legal{font-size:12px;color:rgba(255,255,255,0.2);}
+.footer-licence{font-size:12px;color:rgba(200,151,58,0.6);font-weight:500;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.hero-left>*{animation:fadeUp 0.7s ease both;}
+.hero-left>*:nth-child(1){animation-delay:0.1s;}
+.hero-left>*:nth-child(2){animation-delay:0.22s;}
+.hero-left>*:nth-child(3){animation-delay:0.34s;}
+.hero-left>*:nth-child(4){animation-delay:0.46s;}
+.hero-left>*:nth-child(5){animation-delay:0.58s;}
+.card-stack{animation:fadeIn 0.8s ease 0.3s both;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .hero-left{padding:120px 2rem 80px;}
+  section{padding:70px 2rem;}
+  .why-grid{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr 1fr;}
+  .values-split{grid-template-columns:1fr;}
+  .values-left{position:static;}
+  nav{padding:0 1.5rem;}
+  .nav-links{gap:1.25rem;}
+  footer{padding:2rem;}
+  .footer-inner{flex-direction:column;align-items:flex-start;}
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-brand">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:36px;width:auto;">
-      <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#0C2340" letter-spacing="-2">SNF</text>
-      <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#1A5FA8" letter-spacing="-1">TECH</text>
-      <rect x="20" y="88" width="190" height="4" rx="2" fill="#0C2340"/>
-      <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" style="text-decoration:none;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 110" style="height:32px;width:auto;">
+      <text x="10" y="72" font-family="Georgia,serif" font-size="62" font-weight="700" fill="#0B1F38" letter-spacing="-2">SNF</text>
+      <text x="168" y="72" font-family="Georgia,serif" font-size="62" font-weight="300" fill="#1A5FA8" letter-spacing="-1">TECH</text>
+      <rect x="10" y="82" width="185" height="3" rx="1.5" fill="#0B1F38"/>
+      <rect x="195" y="82" width="175" height="3" rx="1.5" fill="#C8973A"/>
     </svg>
   </a>
-  <a href="mailto:nfsyed@snftech.ca" class="nav-cta">Get in Touch</a>
+  <div class="nav-links">
+    <a href="#why">Why Us</a>
+    <a href="#process">Process</a>
+    <a href="#values">Values</a>
+    <a href="mailto:nfsyed@snftech.ca" class="nav-cta">Book a Call</a>
+  </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-left">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:52px;width:auto;margin-bottom:1.25rem;display:block;">
-        <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#0C2340" letter-spacing="-2">SNF</text>
-        <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#1A5FA8" letter-spacing="-1">TECH</text>
-        <rect x="20" y="88" width="190" height="4" rx="2" fill="#0C2340"/>
-        <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
-        <text x="20" y="114" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#7A8FA8" letter-spacing="3">IT RECRUITMENT · ONTARIO</text>
-      </svg>
-      <div class="hero-badge"><span class="badge-dot"></span>Ontario-Based · Halal-Compliant</div>
-      <h1>Hire IT Talent<br>You Can <em>Actually</em><br>Rely On</h1>
-      <p class="hero-desc">We help small businesses in Ontario find dependable IT professionals — without the stress, wasted time, or costly bad hires.</p>
-      <div class="hero-actions">
-        <a href="mailto:nfsyed@snftech.ca" class="btn-primary">Book a Free 15-Min Call</a>
-        <a href="#how" class="btn-secondary">See how it works →</a>
-      </div>
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <div class="badge-pulse"></div>
+      Ontario's Only Halal-Compliant IT Recruiter
     </div>
-    <div class="hero-card">
-      <div class="hero-card-label">Why clients choose SNF Tech</div>
-      <div class="hero-stat-row">
-        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Ethical process</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">ON</div><div class="hero-stat-label">Ontario-based</div></div>
+    <h1>Place the <em>Right</em><br><strong>Cloud & DevOps</strong><br>Engineer. First Time.</h1>
+    <p class="hero-desc">Small businesses deserve the same quality of IT hiring that enterprise gets. We specialise exclusively in Cloud and DevOps recruitment for Ontario small businesses — with full transparency, no hidden fees, and a 90-day guarantee.</p>
+    <div class="hero-actions">
+      <a href="mailto:nfsyed@snftech.ca" class="btn-primary">Book a Free 15-Min Call</a>
+      <a href="#process" class="btn-ghost">See how it works →</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><div class="trust-dot"></div>Licensed REC-0000012865</div>
+      <div class="trust-item"><div class="trust-dot"></div>48-hr shortlist</div>
+      <div class="trust-item"><div class="trust-dot"></div>90-day guarantee</div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-grid-lines"></div>
+    <div class="card-stack">
+      <div class="stat-card">
+        <div class="stat-num">48<span>hr</span></div>
+        <div class="stat-label">Shortlist delivery</div>
+        <div class="stat-sub">Pre-vetted Cloud & DevOps profiles on your desk in 2 business days</div>
       </div>
-      <div class="hero-license">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-        Licensed Ontario Recruiter · REC-0000012865
+      <div class="stat-card">
+        <div class="stat-num">90<span>day</span></div>
+        <div class="stat-label">Replacement guarantee</div>
+        <div class="stat-sub">If the hire doesn't work out, we replace them at no charge</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1<span>:1</span></div>
+        <div class="stat-label">Direct founder access</div>
+        <div class="stat-sub">You deal with Fahad directly — not a junior desk recruiter</div>
+      </div>
+      <div class="license-strip">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8973A" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <p>Ontario Licensed Recruiter<br><strong>REC-0000012865</strong></p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="why">
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="dot"></span>Cloud Architecture</div>
+    <div class="marquee-item"><span class="dot"></span>DevOps Engineering</div>
+    <div class="marquee-item"><span class="dot"></span>AWS · Azure · GCP</div>
+    <div class="marquee-item"><span class="dot"></span>Kubernetes & Terraform</div>
+    <div class="marquee-item"><span class="dot"></span>CI/CD Pipelines</div>
+    <div class="marquee-item"><span class="dot"></span>Ontario Small Business</div>
+    <div class="marquee-item"><span class="dot"></span>Halal-Compliant Practice</div>
+    <div class="marquee-item"><span class="dot"></span>No Hidden Fees</div>
+    <div class="marquee-item"><span class="dot"></span>Licensed REC-0000012865</div>
+    <div class="marquee-item"><span class="dot"></span>90-Day Guarantee</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><span class="dot"></span>Cloud Architecture</div>
+    <div class="marquee-item"><span class="dot"></span>DevOps Engineering</div>
+    <div class="marquee-item"><span class="dot"></span>AWS · Azure · GCP</div>
+    <div class="marquee-item"><span class="dot"></span>Kubernetes & Terraform</div>
+    <div class="marquee-item"><span class="dot"></span>CI/CD Pipelines</div>
+    <div class="marquee-item"><span class="dot"></span>Ontario Small Business</div>
+    <div class="marquee-item"><span class="dot"></span>Halal-Compliant Practice</div>
+    <div class="marquee-item"><span class="dot"></span>No Hidden Fees</div>
+    <div class="marquee-item"><span class="dot"></span>Licensed REC-0000012865</div>
+    <div class="marquee-item"><span class="dot"></span>90-Day Guarantee</div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="why" id="why">
   <div class="section-inner">
-    <div class="section-tag">Why SNF Tech</div>
-    <h2 class="section-title">Hiring IT Professionals<br>Shouldn't Be a Risk</h2>
-    <p class="section-sub">You need a team that builds your future, not one that costs you time and money through bad hires.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end;margin-bottom:0.5rem;">
+      <div>
+        <div class="section-tag">Why SNF Tech</div>
+        <h2 class="section-title">Hiring IT Talent<br>Shouldn't Be a <em>Gamble</em></h2>
+      </div>
+      <p class="section-sub">Big agencies ignore small businesses. Generic recruiters send stacks of CVs and disappear. We built SNF Tech to solve exactly that — one niche, one market, one promise.</p>
+    </div>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-        <h3>Ethical &amp; Transparent</h3>
-        <p>No hidden fees. No pressure tactics. Honest communication from the first call to the final placement. You always know exactly what's happening.</p>
+        <div class="why-num">01</div>
+        <h3>Ethical & Halal-Compliant</h3>
+        <p>No hidden fees, no pressure tactics, no deception. We operate strictly within Halal business principles — transparent contracts, fair dealings, and we don't work with industries that conflict with our values.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20A14.5 14.5 0 0 0 12 2"/><path d="M2 12h20"/></svg></div>
-        <h3>Ontario-Based &amp; Local</h3>
-        <p>We know the Ontario market, understand local hiring conditions, and place candidates genuinely suited to your business culture and location.</p>
+        <div class="why-num">02</div>
+        <h3>Ontario-Focused Specialist</h3>
+        <p>We place only Cloud and DevOps engineers. Not every IT role. Not across all of Canada. Ontario, your niche, done properly. The recruiter who specialises always beats the generalist.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A5FA8" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-        <h3>Licensed &amp; Accountable</h3>
-        <p>Fully licensed with the Ontario government (REC-0000012865). A registered, accountable recruiter — not a freelancer with no oversight.</p>
+        <div class="why-num">03</div>
+        <h3>Licensed & Accountable</h3>
+        <p>Fully licensed under the Ontario Employment Standards Act (REC-0000012865). You're working with a registered, regulated recruiter — not a freelancer operating in the grey zone.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <h3>Built for Small Business</h3>
+        <p>Small businesses aren't a priority for big agencies. They're our only priority. You get direct access to the founder, personal accountability, and a recruiter who actually cares whether the hire works out.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <h3>48-Hour Shortlist</h3>
+        <p>While other agencies take 1–2 weeks to send CVs, we deliver a shortlist of 3 pre-vetted candidates within 48 hours of a signed agreement. Speed without sacrificing quality.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <h3>90-Day Replacement Guarantee</h3>
+        <p>If your new hire leaves or doesn't work out within 90 days, we find a replacement at no charge. Zero risk. We believe in our placements enough to back them fully.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="how" id="how">
+<!-- PROCESS -->
+<section class="process" id="process">
   <div class="section-inner">
     <div class="section-tag">The Process</div>
-    <h2 class="section-title">Simple. Clear. No Surprises.</h2>
-    <p class="section-sub">We keep things straightforward so you can focus on running your business.</p>
+    <h2 class="section-title">Four Steps.<br>No Surprises.</h2>
+    <p class="section-sub">We keep it simple so you can focus on running your business — not managing a recruiter.</p>
     <div class="steps">
-      <div class="step"><div class="step-num">1</div><h4>Free consultation</h4><p>15-minute call to understand your exact hiring need</p></div>
-      <div class="step"><div class="step-num">2</div><h4>Candidate search</h4><p>We find and screen qualified IT candidates for your role</p></div>
-      <div class="step"><div class="step-num">3</div><h4>You interview</h4><p>Only the best matches reach your desk — no time wasted</p></div>
-      <div class="step"><div class="step-num">4</div><h4>Successful hire</h4><p>Your new team member starts. We follow up to ensure fit</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="values">
-  <div class="section-inner">
-    <div class="section-tag">Our Principles</div>
-    <h2 class="section-title">Built on Values<br>That Don't Change</h2>
-    <p class="section-sub">Every decision we make is guided by the same principles — from which candidates we recommend to how we structure agreements.</p>
-    <div class="values-grid">
-      <div class="value-card"><div class="value-accent"></div><h3>Halal-Compliant Practice</h3><p>We operate strictly within Halal business principles. Transparent contracts, fair dealings, and we do not work with industries that conflict with ethical standards.</p></div>
-      <div class="value-card"><div class="value-accent"></div><h3>No Hidden Fees</h3><p>Our pricing is clear upfront. You will never be surprised by an invoice. What we agree on in the beginning is what you pay — nothing more.</p></div>
-      <div class="value-card"><div class="value-accent"></div><h3>Long-Term Fit Over Quick Placement</h3><p>We care that the person we place actually works out — because your success is how we build our reputation.</p></div>
-      <div class="value-card"><div class="value-accent"></div><h3>Respect for Your Time</h3><p>We respond quickly, communicate clearly, and never waste your time with candidates who don't meet the brief.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="section-inner">
-    <div class="cta-box">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:44px;width:auto;display:block;margin:0 auto 1.5rem;">
-        <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#0C2340" letter-spacing="-2">SNF</text>
-        <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#1A5FA8" letter-spacing="-1">TECH</text>
-        <rect x="20" y="88" width="190" height="4" rx="2" fill="#0C2340"/>
-        <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
-      </svg>
-      <h2>Ready to Find Your Next Reliable Hire?</h2>
-      <p>Let's have a 15-minute conversation about what you're looking for. No commitment, no pressure.</p>
-      <a href="mailto:nfsyed@snftech.ca" class="btn-primary">Book a Free Call</a>
-      <div class="cta-contact">
-        <span>Or reach us directly:</span>
-        <a href="mailto:nfsyed@snftech.ca">nfsyed@snftech.ca</a>
-        <a href="https://linkedin.com/in/fahadsy" target="_blank">linkedin.com/in/fahadsy</a>
-        <a href="https://snftech.ca">snftech.ca</a>
+      <div class="step">
+        <span class="step-arrow">→</span>
+        <div class="step-num">01</div>
+        <h4>Free Consultation</h4>
+        <p>A 15-minute call to understand your exact hiring need, your team culture, and what a successful hire looks like for you.</p>
+      </div>
+      <div class="step">
+        <span class="step-arrow">→</span>
+        <div class="step-num">02</div>
+        <h4>We Source & Screen</h4>
+        <p>We search our network and LinkedIn for the right Cloud/DevOps talent. Every candidate is screened before they reach you.</p>
+      </div>
+      <div class="step">
+        <span class="step-arrow">→</span>
+        <div class="step-num">03</div>
+        <h4>You Interview 3</h4>
+        <p>We send exactly 3 shortlisted candidates — never more. Quality over quantity. You interview only the best fits for your role.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Successful Hire</h4>
+        <p>Your new engineer starts. We follow up at 30 and 90 days to ensure everything is working. Backed by our guarantee.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- VALUES -->
+<section class="values" id="values">
+  <div class="section-inner">
+    <div class="values-split">
+      <div class="values-left">
+        <div class="section-tag">Our Principles</div>
+        <h2 class="section-title">Built on Values<br>That <em>Don't Change</em></h2>
+        <p>Every decision we make — from which candidates we recommend to how we price our service — is guided by the same principles we started with. They aren't marketing language. They're how we operate every day.</p>
+        <a href="mailto:nfsyed@snftech.ca" class="values-cta">Start a Conversation →</a>
+      </div>
+      <div class="values-list">
+        <div class="value-item">
+          <div class="value-header">
+            <div class="value-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8973A" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Halal-Compliant Practice</h3>
+          </div>
+          <p>We operate strictly within Halal business principles. No interest-based transactions, no deceptive practices, no involvement with industries that conflict with our values. This isn't a niche — it's how business should be done.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-header">
+            <div class="value-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8973A" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>No Hidden Fees, Ever</h3>
+          </div>
+          <p>Our fee is agreed in writing before we start. You will never be surprised by an invoice. What we quote is what you pay — nothing more, nothing hidden.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-header">
+            <div class="value-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8973A" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Long-Term Fit, Not Fast Placement</h3>
+          </div>
+          <p>We are not motivated to fill a seat quickly. We are motivated to make a placement that actually works — because your success and your trust is how we build our reputation.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-header">
+            <div class="value-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8973A" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Respect for Your Time</h3>
+          </div>
+          <p>We respond within hours, not days. We send 3 candidates, not 10. We never waste your time with people who don't fit. Your time is your most valuable resource and we treat it that way.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="cta-inner">
+      <div class="cta-eyebrow">Ready to hire right?</div>
+      <h2>Your Next <em>Reliable</em><br>Engineer is 48 Hours Away</h2>
+      <p>One 15-minute call is all it takes to get started. No commitment, no pressure — just an honest conversation about what you need.</p>
+      <div class="cta-box">
+        <div class="cta-box-inner">
+          <svg class="cta-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 110" style="height:42px;width:auto;">
+            <text x="10" y="72" font-family="Georgia,serif" font-size="62" font-weight="700" fill="#ffffff" letter-spacing="-2">SNF</text>
+            <text x="168" y="72" font-family="Georgia,serif" font-size="62" font-weight="300" fill="#7AABDA" letter-spacing="-1">TECH</text>
+            <rect x="10" y="82" width="185" height="3" rx="1.5" fill="#ffffff"/>
+            <rect x="195" y="82" width="175" height="3" rx="1.5" fill="#C8973A"/>
+          </svg>
+          <h3>Book a Free 15-Minute Call</h3>
+          <p>Ontario's only Halal-compliant IT recruitment firm · Cloud & DevOps specialists</p>
+          <div class="cta-btn-row">
+            <a href="mailto:nfsyed@snftech.ca" class="cta-btn-gold">Email Fahad Directly</a>
+            <a href="https://linkedin.com/in/fahadsy" target="_blank" class="cta-btn-outline">Connect on LinkedIn</a>
+          </div>
+          <div class="cta-contacts">
+            <div class="cta-contact-item"><a href="mailto:nfsyed@snftech.ca">nfsyed@snftech.ca</a></div>
+            <div class="cta-contact-item"><a href="https://snftech.ca">snftech.ca</a></div>
+            <div class="cta-contact-item"><a href="https://linkedin.com/in/fahadsy" target="_blank">linkedin.com/in/fahadsy</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="height:38px;width:auto;">
-      <text x="20" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#ffffff" letter-spacing="-2">SNF</text>
-      <text x="174" y="78" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="200" fill="#7AABDA" letter-spacing="-1">TECH</text>
-      <rect x="20" y="88" width="190" height="4" rx="2" fill="#ffffff"/>
-      <rect x="210" y="88" width="170" height="4" rx="2" fill="#C8973A"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 110" style="height:30px;width:auto;">
+      <text x="10" y="72" font-family="Georgia,serif" font-size="62" font-weight="700" fill="#ffffff" letter-spacing="-2">SNF</text>
+      <text x="168" y="72" font-family="Georgia,serif" font-size="62" font-weight="300" fill="#7AABDA" letter-spacing="-1">TECH</text>
+      <rect x="10" y="82" width="185" height="3" rx="1.5" fill="#ffffff"/>
+      <rect x="195" y="82" width="175" height="3" rx="1.5" fill="#C8973A"/>
     </svg>
     <div class="footer-links">
       <a href="mailto:nfsyed@snftech.ca">nfsyed@snftech.ca</a>
       <a href="https://snftech.ca">snftech.ca</a>
-      <a href="https://linkedin.com/in/fahadsy" target="_blank">linkedin.com/in/fahadsy</a>
+      <a href="https://linkedin.com/in/fahadsy" target="_blank">LinkedIn</a>
     </div>
-    <div class="footer-bottom">© 2026 SNF IT Solutions Inc. · Ontario, Canada &nbsp;·&nbsp; Licensed Ontario Recruiter · REC-0000012865</div>
+    <div style="display:flex;flex-direction:column;gap:4px;text-align:right;">
+      <div class="footer-licence">Licensed Ontario Recruiter · REC-0000012865</div>
+      <div class="footer-legal">© 2026 SNF IT Solutions Inc. · Ontario, Canada</div>
+    </div>
   </div>
 </footer>
 
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
 </body>
 </html>
